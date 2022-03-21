@@ -1,0 +1,50 @@
+<div  *ngFor="let item of sumblimationlist"class="all">
+    <div class="card text-center">
+        <div class="card-header cardIntroHeader">
+{{item.name}}        </div>
+        <div class="card-body  bodybg">
+            <p class="card-text crd_txt">
+                {{item.title}}
+            </p>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</div>
+<div class="all">
+
+    <h5 class="card-text crd_txt text-center text-light">
+        استخدامات الطباعة السلك سكرین
+    </h5>
+    <div class="card-body  bodybg " style="display: flex; justify-content: center; align-items: center;">
+        
+        <div *ngFor="let item of sumblimationlist" class="text-right">
+            <p style="font-size: 20px;">{{item.using}}</p>
+        </div>
+        
+    </div>
+</div>
+<div class="all">
+
+    <h5 class="card-text crd_txt text-center text-light">
+        ممیزات الطباعة السلك سكرین
+    </h5>
+    <div class="card-body  bodybg " style="display: flex; justify-content: center; align-items: center;">
+        
+        <div *ngFor="let item of advantages" class="text-right">
+            <ul>
+                <li style="font-size: 20px;">{{item}}</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container ">
+    <div class="card-columns">
+        <div  *ngFor="let item of imgs" class="card div1 " style="margin-right: 150px;">
+                <img  class="card-img-top  imgg " src={{item}} alt="Card image cap">
+        </div>
+    </div>
+</div>
+

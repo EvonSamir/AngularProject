@@ -1,0 +1,40 @@
+<div class="all">
+    <div class="card text-center">
+        <div class="card-header cardIntroHeader">
+            قسم اللافتات والكلادينج والأكلريلك     
+           </div>
+        <div *ngFor="let item of claddinglist" class="card-body  bodybg">
+            <h3  class="card-text crd_txt">
+                {{item.title}}
+            </h3>
+            <p>{{item.Summarization}}</p>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</div>
+<div class="all">
+
+    <h3 class="card-text  text-center text-light">
+        ممیزات اللافتات والكلادينج والأكلريلك
+    </h3>
+    <div class="card-body  bodybg " style="display: flex; justify-content: center; align-items: center;">
+        
+        <div *ngFor="let item of advantages" class="text-right">
+            <ul>
+                <li>{{item}}</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="card-columns">
+        <div *ngFor="let item of imgs" class="card ">
+                <img  class="card-img-top  imgg " width="500" src={{item}} alt="Card image cap">
+        </div>
+    </div>
+</div>

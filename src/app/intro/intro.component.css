@@ -1,0 +1,33 @@
+.cardIntroHeader{
+  /* background-color: #2fa99c; */
+  font-size: 30px;
+  color: white;
+  background-image: linear-gradient(to right, #2fa99c, #8e9ca4);
+  width: 80%;
+  margin: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.bodybg{
+  background-color:#b8d6d2 ;
+  width: 80%;
+  margin: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.crd_txt{
+  font-size:19px ;
+}
+
+.btn_card{
+  background-color: #2fa99c;
+  font-size: 20px;
+}
+
+.hover:hover{
+  animation-name: hvr-wobble-bottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}

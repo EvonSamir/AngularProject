@@ -1,0 +1,92 @@
+<!-- <p>reactive-form-component works!</p> -->
+<!----------------------------------------------------------------- -->
+<!-- -->
+
+<div class="slider abs">
+  <img src= "{{Media.Images}}" style="height: 150px;">
+</div>
+
+<div class="container page_style  ">
+  <ol class="breadcrumb">
+    <li><a routerLink="index">الرئيسية</a></li>
+    <li>إتصل بنا</li>
+  </ol>
+ <h3 class="text-contact page_title" style="color: rgb(45, 190, 171); text-align: right;">
+  <i class="fa fa-phone"></i> إتصل بنا:</h3><hr>
+  
+ <div class="col-md-4 col-lg-6 col-sm-2 col-xs-6 " class="form">
+    <form action="" #ContactFrom="ngForm" method="post"
+     [formGroup]="contactFrom" (ngSubmit)="onSubmit()"
+     (ngSubmit)="Complete()" noValidate  >
+       <div class="form-group">
+         <label for="" class="label"> Name </label>
+         <input  [class.is-invalid]="contactFrom.get('Name')?.invalid &&
+         contactFrom.get('Name')?.touched " [(ngModel)]="userModel.Name"
+          formControlName="Name" type="text" name="name"
+           class="form-control" id="" placeholder="Name"
+           required="" value="">
+           <div *ngIf="Name?.invalid && Name?.touched ">
+            <small class="text-danger "
+            [class.d-none]="contactFrom.get('Name')?.valid ||
+             contactFrom.get('Name')?.untouched"
+              style="text-align: left; font-size: 10px;display: inline-block;">
+             Name must be at least 5 characters</small>
+           </div>
+        </div>
+       <div class="form-group" >
+         <label for="">Phone</label>
+         <input formControlName="Phone"[(ngModel)]="userModel.Phone"
+         type="text" name="phone" class="form-control" id="" placeholder="Phone"
+         value="">
+       </div>
+       <div class="form-group">
+         <label for="">Email</label>
+         <input formControlName="Email"[(ngModel)]="userModel.Email"
+         type="email" name="mail" class="form-control" id=""
+         placeholder="E Mail" value="">
+       </div>
+        <div class="form-group">
+         <label for="">Message</label>
+         <textarea formControlName="Message"[(ngModel)]="userModel.Message"
+         name="message" class="form-control" id="" placeholder="Message" rows="4"
+         required=""></textarea>
+       </div>
+
+       <div class="form-group text-right">
+          <button type="submit" [disabled]="ContactFrom.form.invalid"
+          name="submit" class="btn "> Send
+           <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+       </div>
+
+     </form>
+   </div>
+
+  <div class="col-md-5 col-lg-6 col-sm-2 col-xs-6" style="text-align: right;">
+  <i class="fa-solid fa-phone-flip"></i>
+   <div class="project-desc">
+        <h4><strong class="text-data">  العنوان: </strong><span>
+           {{Media.Address}}</span></h4>
+        <h4><strong class="text-data">  رقم الهاتف :
+           </strong><span dir="ltr">02 - 263 39 844 </span></h4>
+
+       <h4><strong class="text-data"> رقم الموبايل :
+
+       </strong><span dir="ltr"> +20 10 1313 3597 - +20 10 1696 3617
+          </span></h4>
+
+
+       <h4><strong class="text-data">  الإيميل:
+
+       </strong><a href="mailto:visionarteg@gmail.com">{{Media.Email}} </a>
+        <hr>
+    </h4></div>
+   </div>
+
+
+
+   <div class="col-xs-12">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.257067973698!2d31.33980041444515!3d30.115456722170812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581551e56b2c9f%3A0xc277398e4b33bc96!2sVision%20art!5e0!3m2!1sen!2seg!4v1647442012116!5m2!1sen!2seg" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+   </div>
+
+
+</div>

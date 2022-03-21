@@ -1,0 +1,61 @@
+<div  *ngFor="let item of silklist" class="all">
+    <div class="card text-center">
+        <div class="card-header cardIntroHeader">
+{{item.name}}        </div>
+        <div class="card-body  bodybg">
+            <p class="card-text crd_txt">
+                {{item.title}}
+            </p>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</div>
+<div class="all">
+
+    <h5 class="card-text crd_txt text-center text-light">
+        ممیزات الطباعة السلك سكرین
+    </h5>
+    <div class="card-body  bodybg " style="display: flex; justify-content: center; align-items: center;">
+        
+        <div *ngFor="let item of silklist" class="text-right">
+            <p style="font-size: 20px;">{{item.advantage}}</p>
+        </div>
+        
+    </div>
+</div>
+
+<!-- <div class="container ">
+    <div class="card-columns">
+        <div  *ngFor="let item of imgs" class="card div1 ">
+                <img  class="card-img-top  imgg " src={{item}} alt="Card image cap">
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+
+    <div class="container">
+      <div class="card-columns">
+        <div class="card ">
+          <img class="card-img-top  imgg " src="/assets/silkscreen.PNG" alt="Card image cap">
+        </div>
+        <div class="card ">
+          <img class="card-img-top imgg" src="/assets/silkscreen3.PNG" alt="Card image cap">
+        </div>
+        <div class="card ">
+          <img class="card-img-top imgg" src="/assets/silkscreen1.PNG" alt="Card image cap">
+        </div>
+        <!-- <div class="card ">
+          <img class="card-img-top imgg" src="/assets/outindoor4.PNG" alt="Card image cap">
+        </div> -->
+        <div class="card">
+          <img class="card-img-top imgg" src="/assets/silkscreen2.PNG" alt="Card image cap">
+        </div>
+        <!-- <div class="card">
+          <img style="height: 230px;" class="card-img-top imgg" src="assets/img/baner.jpg" alt="Card image cap">
+        </div> -->
+      </div>
+
+    </div>
+  </div>
